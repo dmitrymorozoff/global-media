@@ -1,0 +1,70 @@
+.whyme {
+    margin-top: 11%;
+    @include respond-to($phone) {
+        padding-top: 120%;
+        padding-bottom: 15%;
+    }
+    @include respond-to($tablet-portrait) {
+        margin-top: 45%;
+    }
+}
+
+.section-header {
+    text-align: center;
+}
+
+.section-header__title {
+    font-size: 48px;
+    margin-bottom: 2%;
+    font-weight: bold;
+    color: $dark-gray;
+
+}
+
+.section-header__desc {
+    color: $gray;
+    font-size: 18px;
+    line-height: 28px;
+
+    @include respond-to($phone) {
+        margin: 0 auto;
+        padding: 5%;
+        max-width: 80%;
+    }
+}
+
+.advantages {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;
+    margin-top: 3%;
+    @include respond-to($tablet-portrait) {
+        flex-wrap: wrap;
+        margin-top: 10%;
+    }
+    @include respond-to($phone) {
+      flex-direction: column;
+      align-items: center;
+    }
+}
+
+.advantages-item {
+    width: 21%;
+    padding: 2%;
+    font-size: 18px;
+    line-height: 36px;
+    color: $gray;
+    @include respond-to($tablet-portrait) {
+        flex-basis: 40%;
+    }
+    @include respond-to($phone) {
+    width: 80%;
+    }
+}
+
+.advantages-item-icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 13%;
+    background: url("./../img/circle.png");
+}
