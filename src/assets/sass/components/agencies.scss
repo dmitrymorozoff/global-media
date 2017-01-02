@@ -1,0 +1,64 @@
+.agencies {
+    padding-top: 5%;
+    padding-bottom: 1%;
+    font-family: 'Roboto', sans-serif;
+    background: $bg-gray;
+}
+
+.agencies-header {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.agencies-header__title {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.agencies-header__desc {
+    line-height: 36px;
+    font-size: 18px;
+    color: $gray;
+    width: 65%;
+    @include respond-to($phone) {
+        width: 85%;
+    }
+}
+
+.agencies-info {
+    display: flex;
+    width: 90%;
+    margin: 5% auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include respond-to($phone) {
+        flex-direction: column;
+    }
+}
+
+.agencies-info-item {
+    width: 46%;
+    padding: 2%;
+    display: flex;
+    @include respond-to($phone) {
+        width: 90%;
+        margin-bottom: 5%;
+    }
+}
+
+.agencies-info-item__desc {
+    line-height: 36px;
+    color: $gray;
+    margin: 0;
+    width: 93%;
+}
+
+.agencies-info-item__icon {
+    display: block;
+    width: 32px;
+    margin-right: 5%;
+    height: 32px;
+    background: url("./../img/yes.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}

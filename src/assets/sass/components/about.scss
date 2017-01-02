@@ -1,0 +1,54 @@
+.about {
+    padding-top: 7%;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: 10% auto;
+    flex-wrap: wrap;
+}
+
+.about-content-item {
+    width: 14%;
+    text-align: center;
+    margin-right: 2.5%;
+    padding-bottom: 2%;
+    cursor: pointer;
+    transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    @include respond-to($phone) {
+        flex-basis: 50%;
+    }
+    @include respond-to($tablet-portrait) {
+        flex-basis: 30%;
+    }
+
+    &:hover {
+        border-bottom: 3px solid $orange;
+    }
+}
+
+.about-content-item-icon {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.about-content-item-icon__img {
+    width: 100%;
+}
+
+.about-content-item__title {
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 8%;
+    line-height: 30px;
+    font-size: 18px;
+    @include respond-to($phone) {
+        flex-basis: 50%;
+    }
+    @include respond-to($tablet-portrait) {
+        line-height: 26px;
+        font-size: 16px;
+    }
+}

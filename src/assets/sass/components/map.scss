@@ -1,0 +1,56 @@
+.section-map {
+    height: 700px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-map-contact {
+    width: 70%;
+    height: 70%;
+    position: absolute;
+    background: $white;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-map-contact-item {
+    margin: 2%;
+    text-align: center;
+}
+
+.section-map-contact-item__title {
+    font-size: 18px;
+    color: $gray;
+    line-height: 48px;
+}
+
+.section-map-contact-item__desc {
+    font-weight: bold;
+    font-size: 36px;
+    color: $dark-gray;
+    text-decoration: none;
+
+    &:hover {
+        color: $orange;
+    }
+    @include respond-to($phone) {
+        font-size: 22px;
+    }
+    @include respond-to($tablet-portrait) {
+        font-size: 22px;
+    }
+}
+
+.section-map__map {
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}

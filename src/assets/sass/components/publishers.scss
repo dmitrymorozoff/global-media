@@ -1,0 +1,35 @@
+.section-video {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    height: 600px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.section-video__video {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.section-header-video {
+    position: absolute;
+    z-index: 1;
+    padding-top: 10%;
+    width: 100%;
+    height: 100%;
+    background: $gray-alpha;
+}
+
+.section-header-video__title {
+    color: $white;
+}
+.section-header-video__desc{
+  width: 60%;
+  margin: 0 auto;
+}

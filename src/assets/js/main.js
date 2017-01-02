@@ -1,9 +1,26 @@
-$('.video-frame__player').parent().click(function () {
-    if($(this).children(".video-frame__player").get(0).paused){
-        $(this).children(".video-frame__player").get(0).play();
-        $(this).children(".video-frame__playpause").fadeOut();
-    }else{
-       $(this).children(".video-frame__player").get(0).pause();
-        $(this).children(".video-frame__playpause").fadeIn();
+function loadScript() {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://maps.googleapis.com/maps/api/js?callback=myMap";
+    document.body.appendChild(script);
+}
+window.onload = loadScript;
+function myMap() {
+    var mapLatLng = {
+        lat: 55.848236,
+        lng: -4.215924
+    };
+    var mapCanvas = document.getElementsByClassName('section-map__map')[0];
+    var mapOptions = {
+        center: mapLatLng,
+        zoom: 9,
+        scrollwheel: false
     }
-});
+    var map = new google.maps.Map(mapCanvas, mapOptions);
+    new google.maps.Marker({position: mapLatLng, map: map});
+    google.maps.event.addDomListener(window, "resize", function() {
+        var center = map.getCenter();
+        google.maps.event.trigger(map, "resize");
+        map.setCenter(center);
+    });
+}
