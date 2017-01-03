@@ -17,11 +17,13 @@
     padding-bottom: 2%;
     cursor: pointer;
     transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    border-bottom: 3px solid $white;
     @include respond-to($phone) {
         flex-basis: 50%;
     }
     @include respond-to($tablet-portrait) {
         flex-basis: 30%;
+        margin-bottom: 5%;
     }
 
     &:hover {
@@ -48,7 +50,7 @@
         flex-basis: 50%;
     }
     @include respond-to($tablet-portrait) {
-        line-height: 26px;
-        font-size: 16px;
+        line-height: 24px;
+        font-size: 14px;
     }
 }

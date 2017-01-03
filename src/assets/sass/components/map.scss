@@ -4,6 +4,7 @@
     position: relative;
     justify-content: center;
     align-items: center;
+    font-family: 'Roboto', sans-serif;
 }
 
 .section-map-contact {
@@ -42,7 +43,7 @@
         font-size: 22px;
     }
     @include respond-to($tablet-portrait) {
-        font-size: 22px;
+        font-size: 20px;
     }
 }
 

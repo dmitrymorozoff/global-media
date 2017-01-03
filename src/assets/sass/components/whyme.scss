@@ -18,6 +18,12 @@
     margin-bottom: 2%;
     font-weight: bold;
     color: $dark-gray;
+    @include respond-to($phone) {
+        font-size: 42px;
+    }
+    @include respond-to($tablet-portrait) {
+        font-size: 42px;
+    }
 }
 
 .section-header__desc {
